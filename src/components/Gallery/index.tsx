@@ -11,12 +11,12 @@ export default function Gallery() {
   )
 
   return (
-    <div className='mt-4 flex flex-col items-center'>
+    <div className='mt-4 grid grid-cols-1 gap-2 justify-items-center'>
       <SearchBar setSearchInput={setSearchInput} searchInput={searchInput} />
 
       {
         filteredPhotos.length > 0 ?
-        <div className="grid grid-cols-4 m-4">
+        <div className="grid grid-cols-2 justify-items-center m-4 lg:grid-cols-4">
           {filteredPhotos.map(photo => (
             <Card
               key={photo.id}
